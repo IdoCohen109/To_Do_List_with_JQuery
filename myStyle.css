@@ -1,0 +1,112 @@
+:root {
+    background-color: #000;
+}
+
+body {
+    background-color: #bbb;
+    max-width: 70%;
+    margin: 0 auto;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+
+}
+
+h1 {
+    color: #bff;
+    text-decoration: underline;
+    display: flex;
+    justify-content: center;
+    text-shadow: 5px 4px 2px #666;
+    font-size: 4em;
+}
+
+.mainAddRemoveTasks {
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+#main-tasks-container {
+    display: flex;
+    flex-flow: column;
+}
+
+.add-task-container,
+.remove-task-container {
+    border-radius: 30px;
+    display: inline-block;
+    padding: 10px;
+    box-shadow: 4px 4px 12px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color .5s ease;
+    width: 130px;
+    margin: 0 auto;
+}
+
+.add-task-container:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: #90d81c;
+
+}
+
+.remove-task-container:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: rgb(184, 28, 28);
+    color: #ddd;
+}
+
+.red {
+    color: red;
+    text-decoration: line-through;
+}
+
+.plus-icon,
+.remove-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+
+}
+
+.plus-icon+span,
+.remove-icon+span {
+    font-size: 20px;
+    vertical-align: middle;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+
+
+#tasks-container {
+
+    border-bottom: 3px solid #000;
+}
+
+.task {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+
+.task-content[contenteditable] {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.task-content[contenteditable]:focus {
+    outline: 0 solid transparent;
+}
